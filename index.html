@@ -7,30 +7,40 @@
 	<title>ViLE</title>
     <link href="anim.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-<iframe src="deadinside.mp3" allow="autoplay" style="display:none"></iframe>
-<div class="container" style="display: block;">
-    <div class="row" style="display: block;">
-        <div class="col-md-12" style="display: block;">
-            <img class="img-responsive hanginggirl animated infinite swing nodrag" draggable="false" src="https://files.catbox.moe/1c6vj1.png" style="display: block;">
-        </div>
-    </div>
-    </div>
-    </div>
-<br>
-<br>
-    <!-- <center><h3>
-    <a href="https://t.me/doxer" target="_blank"> kt</a><br>
-    <a href="https://twitter.com/thrilled" target="_blank"> Yo</a><br>
-    <a href="https://twitter.com/disorder" target="_blank"> Weep</a><br>
-    Snuff<br>
-    Ominous<br>
-    <a href="https://t.me/impleads" target="_blank"> xrt</a>
-    </center> -->
-	<a href="https://discord.com/invite/versa" class="contact-btn"><h3>Contact</h3></a>
+<!-- <iframe src="deadinside.mp3" allow="autoplay" style="display:none"></iframe> -->
+	<div class="top-right">
+		<b><a class="skip">click to enter</a></b>
+	</div>
+	<div class="main-body">
 
-	<audio controls autoplay>
-		<source src="music.mp3" type="audio/mpeg">
-	</audio>
+		<div class="container" style="display: block;">
+			<div class="row" style="display: block;">
+				<div class="col-md-12" style="display: block;">
+					<img class="img-responsive hanginggirl animated infinite swing nodrag" draggable="false" src="https://files.catbox.moe/1c6vj1.png" style="display: block;">
+				</div>
+			</div>
+		</div>
+		<a href="https://discord.com/invite/versa" class="contact-btn"><h3>Contact</h3></a>
+
+				  <audio id="player" autoplay loop controls style="display: none;">
+					<source src="music.mp3" type="audio/mpeg">
+				</audio>
+	</div>
+</div>
+	
+
+
+
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+		$(".skip").click(function(){
+			$(".top-right").css("display", "none");
+			$(".main-body").css("display", "block");
+			$("#player")[0].play();
+
+		})
+	</script>
+
     <script>
 	var colour="white";
 		var sparkles=50;
@@ -213,7 +223,8 @@
 		}
 	</script>
 	<script>
-    // disable right click
+
+
     document.addEventListener('contextmenu', event => event.preventDefault());
  
     document.onkeydown = function (e) {

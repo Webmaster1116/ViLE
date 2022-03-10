@@ -6,6 +6,7 @@ body {
   overflow-y: hidden;
   max-width: 100%;
   overflow-x: hidden;
+  cursor: url(cursor.png), default;
 }
 a:link {
   color: white;
@@ -449,4 +450,19 @@ playback timings (ms):
   position: fixed;
   top: 30px;
   left: 30px;
+}
+.top-right {
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-family: poppins, sans-serif;
+  z-index: 1;
+}
+.main-body {
+  display: none;
+}
+.skip {
+  font-size: 18px;
 }
